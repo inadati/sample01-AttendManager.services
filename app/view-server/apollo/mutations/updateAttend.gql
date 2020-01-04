@@ -1,0 +1,16 @@
+mutation(
+    $id: String!
+    $is_attend: Boolean!
+    $in_time: String!
+    $out_time: String!
+) {
+    updateAttend(
+        id: $id
+        is_attend: $is_attend
+        in_time: $in_time
+        out_time: $out_time
+    ) {
+        id
+        date_start_time
+    }
+}

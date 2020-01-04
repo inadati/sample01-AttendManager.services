@@ -1,0 +1,51 @@
+type Query {
+    staffs: [Staff!]!
+    getCertificate(email: String!, password: String!): Auth!
+}
+
+type Mutation {
+    # createUser(name: String!, is_admin: Boolean!, email: String!, password: String!): User!
+    createStaff(name: String!, age: Int!): Staff!
+    deleteStaff(id: String!): Staff!
+    updateStaffProfile(id: String!, name: String!, age: Int!): Staff!
+    updateAttend(
+        id: String!
+        is_attend: Boolean!
+        in_time: String!
+        out_time: String!
+    ): Attend!
+}
+
+type Auth {
+    user_id: String!
+    user_name: String!
+    token: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+    is_admin: Boolean!
+    email: String
+    password: String
+}
+
+type Staff {
+    id: String!
+    name: String!
+    age: Int!
+    attends: [Attend!]
+    created_at: String
+    updated_at: String!
+}
+
+type Attend {
+    id: String!
+    staff_id: String!
+    in_time: String!
+    out_time: String!
+    is_attend: Boolean!
+    date_start_time: String!
+    created_at: String
+    updated_at: String!
+}

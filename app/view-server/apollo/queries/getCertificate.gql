@@ -1,0 +1,7 @@
+query($email: String!, $password: String!) {
+    getCertificate(email: $email, password: $password) {
+        user_id
+        user_name
+        token
+    }
+}

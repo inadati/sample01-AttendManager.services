@@ -1,0 +1,10 @@
+mutation (
+    $id: String!
+    $name: String!
+    $age: Int!
+) {
+    updateStaffProfile(id: $id, name: $name, age: $age) {
+        id
+        name
+    }
+}

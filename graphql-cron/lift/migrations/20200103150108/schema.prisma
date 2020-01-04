@@ -1,0 +1,31 @@
+datasource db {
+    provider = "postgresql"
+    url = "***"
+}
+
+model staffs {
+    id         String   @default(cuid()) @id
+    name       String
+    age        Int
+    created_at DateTime @default(now())
+    updated_at DateTime @updatedAt
+}
+
+model attends {
+    id              String   @default(cuid()) @id
+    staff_id        String
+    in_time         String
+    out_time        String
+    is_attend       Boolean
+    date_start_time DateTime
+    created_at      DateTime @default(now())
+    updated_at      DateTime @updatedAt
+}
+
+model users {
+    id       String  @default(cuid()) @id
+    name     String  @default("guest")
+    email    String  @unique
+    password String  @unique
+    is_admin Boolean
+}

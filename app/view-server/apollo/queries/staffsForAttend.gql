@@ -1,0 +1,13 @@
+query {
+    staffs {
+        id
+        name
+        attends {
+            id
+            date_start_time
+            is_attend
+            in_time
+            out_time
+        }
+    }
+}

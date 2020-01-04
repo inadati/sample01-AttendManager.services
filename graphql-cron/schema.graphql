@@ -1,0 +1,27 @@
+type Query {
+    test: String!
+}
+
+type Mutation {
+    cronUpdateAttends: String!
+}
+
+type Staff {
+    id: String!
+    name: String!
+    age: Int!
+    attends: [Attend!]
+    created_at: String
+    updated_at: String!
+}
+
+type Attend {
+    id: String!
+    staff_id: String!
+    in_time: String!
+    out_time: String!
+    is_attend: Boolean!
+    date_start_time: String!
+    created_at: String
+    updated_at: String!
+}

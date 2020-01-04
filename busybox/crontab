@@ -1,0 +1,1 @@
+0 0 * * * echo $TZ && date && curl -i -H 'Content-Type: application/json' -X POST -d '{"query": "mutation{ cronUpdateAttends }"}' http://graphql-cron:4100/query

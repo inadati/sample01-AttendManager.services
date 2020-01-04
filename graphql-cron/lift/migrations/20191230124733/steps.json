@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "attends",
+      "field": "in_time",
+      "type": "String"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "attends",
+      "field": "out_time",
+      "type": "String"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+mutation ($id: String!) {
+    deleteStaff(id: $id) {
+        id
+        name
+    }
+}

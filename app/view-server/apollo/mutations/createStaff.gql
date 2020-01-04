@@ -1,0 +1,6 @@
+mutation CreateStaff($name: String!, $age: Int!) {
+    createStaff(name: $name, age: $age) {
+        id
+        name
+    }
+}
