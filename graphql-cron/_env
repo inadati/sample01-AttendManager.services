@@ -1,0 +1,2 @@
+PORT = 4100
+GORM_SETUP = "host=postgres port=5432 user=postgres dbname=postgres password=postgres sslmode=disable"
